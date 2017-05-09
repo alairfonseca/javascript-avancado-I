@@ -25,7 +25,9 @@ class NegociacaoController {
     //    ...this._inputData.value.split('-')
     //    .map((item, index) => return item - index % 2)
     //  );
-    let data = new Date(this._inputData.value.split('-'));
+    let helper = new DateHelper();
+
+    let data = helper.textoParaData(this._inputData.value);
 
      let negociacao = new Negociacao(
        data,
@@ -34,6 +36,8 @@ class NegociacaoController {
      );
 
      console.log(negociacao);
+
+     console.log(helper.dataParaTexto(negociacao.data));
     //  console.log(this.inputData.value);
     //  console.log(this.inputQuantidade.value);
     //  console.log(this.inputValor.value);

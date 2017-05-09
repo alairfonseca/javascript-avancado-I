@@ -3,7 +3,7 @@ class Negociacao {
   constructor(data, quantidade, valor) {
     // cria um novo objeto do tipo Date para que seja
     //armazenada uma referencia segura.
-    this._data = new Date(data.getTime);
+    this._data = new Date(data.getTime());
     this._quantidade = quantidade;
     this._valor = valor;
 
