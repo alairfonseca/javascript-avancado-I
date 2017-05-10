@@ -8,6 +8,8 @@ class ListaNegociacoes {
   }
 
   get negociacoes() {
-    return this._negociacoes;
+    // retornando uma nova lista de negociacoes para que
+    // a lista original nao possa ser modificada.
+    return [].concat(this._negociacoes);
   }
 }
